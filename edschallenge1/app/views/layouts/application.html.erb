@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Edschallenge1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    
+    <nav>
+      <%= link_to 'HOME', root_path %>
+      <%= link_to 'ABOUT', pages_about_path %>
+    </nav>
+    
+    <%= yield %>
+    
+    
+  </body>
+</html>
