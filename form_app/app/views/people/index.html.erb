@@ -1,0 +1,5 @@
+<% @people.each do |p| %>
+  <p>Name: <%= p.name %></p>
+  <% end %>
+  
+  <%= link_to "Add Name", new_person_path %>
