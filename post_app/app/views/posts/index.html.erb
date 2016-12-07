@@ -1,0 +1,6 @@
+<% @posts.each do |p| %>
+  <p class="title"><%= p.title %></p>
+  <p class="body"><%= p.body %></p>
+  <%= link_to "Edit Post", edit_post_path(p) %>
+  <%= link_to "Show Post", post_path(p) %>
+<% end %>

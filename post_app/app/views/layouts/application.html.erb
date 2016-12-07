@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PostApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  
+  <%= link_to "Home", root_path %>
+  <%= link_to "Create Posts", new_post_path %>
+  
+  <% flash.each do |name, message| %>
+    <%= content_tag :div, message, class: "alert alert-#{name}" %>
+  <% end %>
+    
+    
+    <%= yield %>
+  </body>
+</html>
