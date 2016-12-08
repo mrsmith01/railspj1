@@ -9,15 +9,18 @@
   </head>
 
   <body>
-  
-  <%= link_to "Home", root_path %>
-  <%= link_to "Create Posts", new_post_path %>
+
+<div class="container">  
+  <%= link_to "Home", root_path, class: "btn btn-primary" %>
+  <%= link_to "Create Posts", new_post_path, class: "btn btn-primary" %>
   
   <% flash.each do |name, message| %>
     <%= content_tag :div, message, class: "alert alert-#{name}" %>
   <% end %>
+
     
     
     <%= yield %>
+    </div>
   </body>
 </html>
